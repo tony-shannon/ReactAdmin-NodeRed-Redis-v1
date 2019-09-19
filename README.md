@@ -94,6 +94,25 @@ For this reason you should define domain name in the `public/index.html` file:
 
 After this you should import required flows to your local Node-Red. Flows are located inside your project in the **/flows** directory.
 
+Once you have imported flows on our local Node-Red, you should configure server settings for Redis node on the flow.
+
+You can get IP address of my-redis docker.
+
+```
+$ docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' my-redis
+```
+
+Once you obtain the IP address, double click on the redis node and edit Server settings.
+
+Fill the Host IP address as docker IP address.
+
+Some tips to access local dev server from external source.
+
+You have to add firewall rule to allow 3000 port
+
+```
+$ ufw allow 3000/tcp
+```
 
 ## Screenshots
 
