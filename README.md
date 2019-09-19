@@ -106,6 +106,14 @@ Once you obtain the IP address, double click on the redis node and edit Server s
 
 Fill the Host IP address as docker IP address.
 
+Some tips to access local dev server from external source.
+
+You have to add firewall rule to allow 3000 port
+
+```
+$ ufw allow 3000/tcp
+```
+
 ## Screenshots
 
 ![React Admin demo frontpage for Users ](/img/ReactAdminOnNR.PNG)
